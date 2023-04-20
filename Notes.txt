@@ -1,0 +1,15 @@
+﻿The code is a Python script that uses the Selenium and BeautifulSoup libraries to scrape data from the options chain webpage of the National Stock Exchange of India (NSE) and save it to a Pandas DataFrame. The code loads the webpage, selects the NIFTY index, and extracts the options chain data for a given strike price.
+
+
+Here are the main steps performed by the code:
+
+
+1. Import the required libraries - Selenium, BeautifulSoup, and Pandas.
+2. Define the URL of the NSE options chain webpage and the index to be selected (NIFTY or BANKNIFTY).
+3. Define a function page_inits to initialize the Chrome webdriver instance and load the options chain URL with the desired index.
+4. Define a function get_option_chain_data to extract the options chain data from the HTML source using BeautifulSoup and convert it to a Pandas DataFrame.
+5. Define a function get_options_by to select the desired options by either strike price or expiry date and extract the corresponding options chain data.
+6. Call the page_inits function to initialize the web driver instance and load the options chain URL for the NIFTY index.
+7. Call the get_options_by function to extract the options chain data for the given strike price.
+8. Find and click the download link to download the options chain data as a CSV file.
+9. Quit the web driver instance.
